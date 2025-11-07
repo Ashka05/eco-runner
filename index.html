@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Waste Tracker | Prototype</title>
+  <!-- ✅ Fixed path -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Gain points by depositing your e-junk!</h1>
+
+    <div id="buttons">
+      <button id="startBtn" class="green-btn">Start Tracking</button>
+      <button id="cancelBtn" class="red-btn">Cancel</button>
+    </div>
+
+    <div id="status" style="display: none;">
+      <p id="statusText">Retrieving API...</p>
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+    </div>
+
+    <video id="mapVideo" muted style="display:none;" width="600"></video>
+
+    <button id="scanBtn" class="green-btn" style="display:none;">Scan QR Code to Generate Receipt</button>
+
+    <video id="scanVideo" muted style="display:none;" width="400"></video>
+
+    <div id="receiptSection" style="display:none;">
+      <div id="receiptBox">
+        <h2 id="pointsText">500 Points Credited 🎉</h2>
+        <p>These points are credited to your <strong>Game Account</strong></p>
+        <table id="receiptTable">
+          <tr><th>Item</th><th>Weight</th><th>Points</th></tr>
+          <tr><td>Wire Cables</td><td>60 gm</td><td>200 pts</td></tr>
+          <tr><td>Electronic Gadget</td><td>120 gm</td><td>300 pts</td></tr>
+          <tr><td><strong>Total</strong></td><td></td><td><strong>500 pts</strong></td></tr>
+        </table>
+        <button id="doneBtn" class="blue-btn">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- ✅ Fixed path -->
+  <script src="script.js"></script>
+</body>
+</html>
